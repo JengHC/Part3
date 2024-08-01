@@ -5,7 +5,10 @@ using UnityEngine;
 public class ProjectManager : MonoBehaviour
 {
     static ProjectManager s_instance;
-    public static ProjectManager Instance { get { Init();  return s_instance; } }
+    static ProjectManager Instance { get { Init();  return s_instance; } }
+
+    InputManager _input = new InputManager();
+    public static InputManager input { get { return Instance._input; } }
 
     void Start()
     {
@@ -14,7 +17,7 @@ public class ProjectManager : MonoBehaviour
 
     void Update()
     {
-        
+        _input.OnUpdate();
     }
     static void Init()
     {
