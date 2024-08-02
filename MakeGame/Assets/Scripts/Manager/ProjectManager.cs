@@ -8,7 +8,12 @@ public class ProjectManager : MonoBehaviour
     static ProjectManager Instance { get { Init();  return s_instance; } }
 
     InputManager _input = new InputManager();
-    public static InputManager input { get { return Instance._input; } }
+
+    ResourceManager _resource = new ResourceManager();
+
+    public static InputManager Input { get { return Instance._input; } }
+
+    public static ResourceManager Resource { get { return Instance._resource; } }
 
     void Start()
     {
