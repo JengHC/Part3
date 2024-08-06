@@ -33,9 +33,7 @@ public class TestCollision : MonoBehaviour
 
         // Debug.Log(Input.mousePosition); // Screen
         //Debug.Log(Camera.main.ScreenToViewportPoint(Input.mousePosition)); // ViewPort
-
-        
-
+     
         if (Input.GetMouseButtonDown(0))
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
@@ -54,7 +52,6 @@ public class TestCollision : MonoBehaviour
                 Debug.Log($"Raycast Camera @ {hit.collider.gameObject.tag}");
             }
         }
-
 
         //if (Input.GetMouseButtonDown(0))
         //{
