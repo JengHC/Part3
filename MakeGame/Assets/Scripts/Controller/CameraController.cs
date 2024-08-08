@@ -36,7 +36,8 @@ public class CameraController : MonoBehaviour
             else
             {
                 transform.position = _player.transform.position + _delta;
-                transform.LookAt(_player.transform);
+                // transform.LookAt(_player.transform);
+                transform.LookAt(playerPosition);
             }
         }
     }
