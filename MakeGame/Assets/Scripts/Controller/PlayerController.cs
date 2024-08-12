@@ -22,8 +22,6 @@ public class PlayerController : MonoBehaviour
 
     }
 
-    float wait_run_ratio = 0;
-
 
 
     public enum PlayerState
@@ -54,19 +52,24 @@ public class PlayerController : MonoBehaviour
             transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(dir), 30 * Time.deltaTime);
         }
 
-        // 애니메이션
-        wait_run_ratio = Mathf.Lerp(wait_run_ratio, 1, 10.0f * Time.deltaTime);
+        // 애니메이션       
         Animator anim = GetComponent<Animator>();
-        anim.SetFloat("wait_run_ratio", wait_run_ratio);
-        anim.Play("WAIT_RUN");
+
+        //현재 게임 상태에 대한 정보
+        anim.SetFloat("speed", _speed);
+    }
+
+    void OnRunEvent(string a)
+    {
+        Debug.Log($"뚜벅 뚜벅 ~~{a}");
     }
 
     void UpdateIdle()
     {
-        wait_run_ratio = Mathf.Lerp(wait_run_ratio, 0, 10.0f * Time.deltaTime);
+        // 애니메이션
         Animator anim = GetComponent<Animator>();
-        anim.SetFloat("wait_run_ratio", wait_run_ratio);
-        anim.Play("WAIT_RUN");
+
+        anim.SetFloat("speed", 0);
     }
 
 
