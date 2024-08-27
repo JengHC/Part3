@@ -16,13 +16,12 @@ public class InputManager
         if (EventSystem.current.IsPointerOverGameObject())
             return;
 
-
         if (Input.anyKey && KeyAction != null)
             KeyAction.Invoke();
 
         if(MouseAction != null)
         {
-            if(Input.GetMouseButton(0) || Input.GetMouseButton(1))
+            if(/*Input.GetMouseButton(0) || */Input.GetMouseButton(1))
             {
                 MouseAction.Invoke(Define.MouseEvent.Press);
                 _pressed = true;
