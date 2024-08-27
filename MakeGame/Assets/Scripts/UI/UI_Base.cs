@@ -55,8 +55,6 @@ public class UI_Base : MonoBehaviour
 
     public static void AddUIEvent(GameObject go, Action<PointerEventData>action,Define.UIEvnet type = Define.UIEvnet.Click)
     {
-
-
         UI_EventHandler evt = Util.GetOrAddComponent<UI_EventHandler>(go);
         switch(type)
         {
@@ -71,6 +69,6 @@ public class UI_Base : MonoBehaviour
                 break;
         }
                
-        evt.OnDragHandler += ((PointerEventData data) => { evt.gameObject.transform.position = data.position;  });
+        //evt.OnDragHandler += ((PointerEventData data) => { evt.gameObject.transform.position = data.position;  });
     }
 }
