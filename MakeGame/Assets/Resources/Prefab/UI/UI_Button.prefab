@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4566855287994493579}
   - component: {fileID: 6128091880073852822}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: ScoreText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -134,6 +134,37 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!1 &4398555875490973554
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 437555424316466408}
+  m_Layer: 0
+  m_Name: TestObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &437555424316466408
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4398555875490973554}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -13.518738, y: -13.518753, z: 0.044433594}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5968922337508855131}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4767142021969556576
 GameObject:
   m_ObjectHideFlags: 0
@@ -146,7 +177,7 @@ GameObject:
   - component: {fileID: 6011845301750236490}
   - component: {fileID: 4635492881401418921}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: PointText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -302,6 +333,7 @@ RectTransform:
   m_Children:
   - {fileID: 9095646763318144860}
   - {fileID: 4393421562593355592}
+  - {fileID: 437555424316466408}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -384,7 +416,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ecffff40d4f42f24198f3e9e730507d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _text: {fileID: 6128091880073852822}
 --- !u!1 &8431665371713074436
 GameObject:
   m_ObjectHideFlags: 0
@@ -398,7 +429,7 @@ GameObject:
   - component: {fileID: 5832488712780436568}
   - component: {fileID: 6994924886381323540}
   m_Layer: 5
-  m_Name: Button
+  m_Name: PointButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -5,18 +5,14 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class UI_Button : MonoBehaviour
+public class UI_Button : UI_Base
 {
     //[SerializeField]
     //TextMeshProUGUI _text;
 
-    Dictionary<Type, UnityEngine.Object[]> _objects = new Dictionary<Type, UnityEngine.Object[]>();
-
-
-
     enum Buttons
     {
-        PointButton,
+        PointButton
     }
 
     enum Texts
@@ -25,24 +21,20 @@ public class UI_Button : MonoBehaviour
         ScoreText,
     }
 
+    enum GameObjects
+    {
+        TestObject,
+    }
+
     private void Start()
     {
         Bind<Button>(typeof(Buttons));
-        Bind<Text>(typeof(Texts));
+        Bind<TextMeshProUGUI>(typeof(Texts));
+        Bind<GameObject>(typeof(GameObjects));
+
+        Get<TextMeshProUGUI>((int)Texts.ScoreText).text = "Bind Test";
     }
 
-    void Bind<T>(Type type) where T : UnityEngine.Object
-    {
-        string[] names = Enum.GetNames(type);
-
-        UnityEngine.Object[] objects = new UnityEngine.Object[names.Length];
-        _objects.Add(typeof(T), objects);
-
-        for(int i = 0; i<names.Length; i++)
-        {
-            objects[i] = Utill.FindChild<T>(gameObject, names[i], true);   
-        }
-    }
 
     int _score = 0;
 
@@ -50,5 +42,6 @@ public class UI_Button : MonoBehaviour
     {
         _score++;
         //_text.text = $"점수 : {_score}";
+        //Get<TextMeshPro>((int)Texts.ScoreText).text = $"점수 : {_score}";
     }
 }
