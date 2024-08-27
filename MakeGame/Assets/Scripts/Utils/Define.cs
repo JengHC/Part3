@@ -4,6 +4,13 @@ using UnityEngine;
 
 public class Define
 {
+
+    public enum UIEvnet
+    {
+        Click,
+        Drag,
+    }
+
     public enum CameraMode
     {
         QuarterView,
