@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.InteropServices.WindowsRuntime;
 using UnityEngine;
 
 public class ProjectManager : MonoBehaviour
@@ -8,12 +9,12 @@ public class ProjectManager : MonoBehaviour
     static ProjectManager Instance { get { Init();  return s_instance; } }
 
     InputManager _input = new InputManager();
-
     ResourceManager _resource = new ResourceManager();
+    UIManager _ui = new UIManager();
 
     public static InputManager Input { get { return Instance._input; } }
-
     public static ResourceManager Resource { get { return Instance._resource; } }
+    public static UIManager UI { get { return Instance._ui; } }
 
     void Start()
     {

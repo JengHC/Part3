@@ -22,6 +22,10 @@ public class PlayerController : MonoBehaviour
 
         //ProjectManager.Resource.Instantiate("UI/UI_Button");
 
+        UI_Button ui = ProjectManager.UI.SHowPopupUI<UI_Button>();
+
+        ProjectManager.UI.ClosePopupUI();
+
     }
 
 
