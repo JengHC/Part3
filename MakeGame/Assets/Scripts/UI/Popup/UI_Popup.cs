@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class UI_Popup : UI_Base
 {
-    void Start()
+    public virtual void Init()
     {
-        
+        ProjectManager.UI.SetCanvas(gameObject, true);
     }
 
-    void Update()
+    public virtual void ClosePopupUI()
     {
-        
+        ProjectManager.UI.ClosePopupUI(this);
     }
 }
